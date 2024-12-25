@@ -10,7 +10,10 @@
             "type": "debugpy",
             "request": "launch",
             "program": "data_separator.py",
-            "args": ["data/soy_sauce"],
+            "args": [
+                "--data_dir", "data/soy_sauce",
+                "--train_ratio", "0.9"
+            ],
             "console": "integratedTerminal"
         },
         {
