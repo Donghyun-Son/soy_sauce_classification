@@ -1,0 +1,15 @@
+# coding: utf-8
+
+# conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+# Pytorch는 위의 명령어로 conda로 설치하는 것을 권장함
+
+# pip로 설치할 경우 아래 내용을 주석 해제 후 pip install -r requirements.txt로 설치
+# --extra-index-url https://download.pytorch.org/whl/cu118
+# torch
+# torchvision
+# torchaudio
+
+tqdm
+matplotlib
+seaborn
+scikit-learn
