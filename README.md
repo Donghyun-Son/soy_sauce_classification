@@ -20,18 +20,12 @@
     ```
    
    b. pip 사용 시:
-      1. requirements.txt 파일의 pytorch 관련 주석을 해제 (macOS 사용 시 extra-index-url은 주석 해제할 필요 없음)
+      - requirements.txt 파일의 pytorch 관련 주석을 해제 (macOS 사용 시 extra-index-url은 주석 해제할 필요 없음)
       ```bash
       # --extra-index-url https://download.pytorch.org/whl/cu118
       # torch
       # torchvision
       # torchaudio
-      ```
-
-      2. pip install 명령어 실행
-      
-      ```bash
-      pip install -r requirements.txt
       ```
 
 2. 기타 필요 라이브러리 설치:
