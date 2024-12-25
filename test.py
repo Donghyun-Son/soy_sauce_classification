@@ -70,7 +70,16 @@ def parse_args():
 
 def main():
     args = parse_args()
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    if torch.cuda.is_available():
+        print("Using GPU for training")
+        device = torch.device("cuda")
+    elif torch.backends.mps.is_available():
+        print("Using MPS for training")
+        device = torch.device("mps")
+    else:
+        print("Using CPU for training")
+        device = torch.device("cpu")
 
     # 데이터 로더 생성
     _, test_loader, classes = get_data_loaders(
