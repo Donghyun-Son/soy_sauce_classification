@@ -64,9 +64,21 @@ soy_sauce_classification/
 
 2. 데이터 분리:
 ```bash
-python data_separator.py data/soy_sauce
+python data_separator.py \
+    --data_dir data/soy_sauce \
+    --train_ratio 0.9 \
+    --seed 42
 ```
-- 실행 후 train/val 폴더로 자동 분리됨
+
+주요 인자:
+- `--data_dir`: 원본 이미지가 있는 디렉토리 (필수)
+- `--train_ratio`: 학습 데이터 비율 (기본값: 0.9)
+- `--seed`: 랜덤 시드 (기본값: 42)
+
+실행 결과:
+- train/val 폴더 자동 생성
+- 지정된 비율로 데이터 분리
+- 분리 결과 통계 출력
 
 ## 모델 구조
 
