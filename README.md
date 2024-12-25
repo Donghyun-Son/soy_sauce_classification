@@ -44,7 +44,8 @@ soy_sauce_classification/
 │       ├── day0/        # 0일차 숙성 이미지
 │       ├── day30/       # 30일차 숙성 이미지
 │       ├── day60/       # 60일차 숙성 이미지
-│       ├── day60/       # 90일차 숙성 이미지
+│       ├── day90/       # 90일차 숙성 이미지
+│       ├── day150/       # 150일차 숙성 이미지
 │       ├── train/       # 학습용 데이터 (data_separator.py 실행 시 자동 생성)
 │       └── val/         # 검증용 데이터 (data_separator.py 실행 시 자동 생성)
 ├── data_separator.py    # 데이터셋 분리
@@ -54,12 +55,6 @@ soy_sauce_classification/
 ├── inference.py       # 단일 이미지 추론
 └── requirements.txt    # 의존성 패키지 설치 목록
 ```
-
-## 모델 구조
-
-- 베이스 모델: EfficientNetV2-S
-- 전이학습 적용
-- 출력: 숙성 기간별 분류 (day0, day30, day60, ...)
 
 ## 데이터 준비
 
@@ -72,6 +67,12 @@ soy_sauce_classification/
 python data_separator.py data/soy_sauce
 ```
 - 실행 후 train/val 폴더로 자동 분리됨
+
+## 모델 구조
+
+- 베이스 모델: EfficientNetV2-S
+- 전이학습 적용
+- 출력: 숙성 기간별 분류 (day0, day30, day60, ...)
 
 ## 모델 학습
 
