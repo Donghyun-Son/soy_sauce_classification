@@ -9,12 +9,18 @@
 1. PyTorch 설치:
    
    a. conda 사용 시 (권장):
+    - Windows나 Linux
    ```bash
    conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
    ```
+
+    - macOS
+    ```bash
+    conda install pytorch::pytorch torchvision torchaudio -c pytorch
+    ```
    
    b. pip 사용 시:
-      1. requirements.txt 파일의 pytorch 관련 주석을 해제
+      1. requirements.txt 파일의 pytorch 관련 주석을 해제 (macOS 사용 시 extra-index-url은 주석 해제할 필요 없음)
       ```bash
       # --extra-index-url https://download.pytorch.org/whl/cu118
       # torch
